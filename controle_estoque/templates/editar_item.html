@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de estoque</title>
+    <link
+      href="{% static 'global/css/global.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'controle_estoque/css/style.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <main class="main_cadastro">
+      <div class="header_cadastro">
+        <a href="{% url 'consulta_item' produto.id %}" class="back_home">
+          <span class="text_back_home">Voltar</span>
+        </a>
+        <h1 class="titulo_cadastro">Edita item</h1>
+      </div>
+      <div class="div_form">
+        <form
+          action="{% url 'editar_item' produto.id  %}"
+          method="post"
+          class="form_consulta_item"
+        >
+          {% csrf_token %} {{form.as_p}}
+          <div class="alinhar_botao">
+            <button type="submit" class="botao_salvar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

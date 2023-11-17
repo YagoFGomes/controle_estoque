@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de estoque</title>
+    <link
+      href="{% static 'global/css/global.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'controle_estoque/css/style.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <main class="main_cadastro">
+      <div class="header_cadastro">
+        <a href="{% url 'consulta_page' %}" class="back_home">
+          <span class="text_back_home">Voltar</span>
+        </a>
+        <h1 class="titulo_cadastro">Consulta item</h1>
+      </div>
+      <div class="div_form">
+        <div class="form_consulta_item">
+          <div class="botao_editar">
+            <a href="{% url 'editar_item' produto.id %}">
+              <img
+                src="{% static 'controle_estoque/imagens/edit.png' %}"
+                width="25"
+                alt="editar"
+              />
+            </a>
+          </div>
+          {{form.as_p}}
+          <div class="alinhar_botao">
+            <form action="{% url 'delete_item' produto.id %}" method="post">
+              {% csrf_token %}
+              <button class="botao_excluir">Excluir</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="{% static 'controle_estoque/js/scripts.js' %}"></script>
+  </body>
+</html>

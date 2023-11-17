@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
+
+:root {
+  --bg: rgb(169, 92, 241);
+  --bg-bloco: rgb(189, 239, 186);
+  --bg-bloco-hover: antiquewhite;
+  --text: black;
+  --font: "Roboto", sans-serif;
+  --bg-form-cadastro: white;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.main_home {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 200px;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.bloco_main {
+  width: 300px;
+  height: 150px;
+  background-color: var(--bg-bloco);
+  color: var(--text);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.bloco_main:hover {
+  background-color: var(--bg-bloco-hover);
+}
+
+.header_cadastro {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  padding: 10px 20px;
+}
+
+.main_cadastro {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: var(--bg);
+  flex-direction: column;
+}
+
+.titulo_cadastro {
+}
+.div_form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_cadastro {
+  width: 700px;
+  height: auto;
+  background-color: var(--bg-form-cadastro);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.form_cadastro p {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+}
+.form_cadastro p label {
+  font-size: 22px;
+}
+.form_cadastro p input {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.form_cadastro p select {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form_cadastro button {
+  width: 300px;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.alinhar_botao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_cadastro button:hover {
+  background-color: var(--bg-bloco-hover);
+}
+
+.header_consulta {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  padding: 10px 20px;
+}
+
+.main_consulta {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
+  background-color: var(--bg);
+  flex-direction: column;
+}
+
+.lista_produtos_estoque {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.card_produto_estoque {
+  width: 35%;
+  height: 135px;
+  background-color: aliceblue;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: x-large;
+}
+
+.header_card_produto {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nome_codigo_produto {
+}
+
+.acoes_card {
+}
+
+.botao_visualizar_card_produto {
+  cursor: pointer;
+}
+
+.footer_card_produto {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantidade_produto {
+}
+
+.valor_produto {
+}
+
+.form_consulta_item {
+  width: 700px;
+  height: auto;
+  background-color: var(--bg-form-cadastro);
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.form_consulta_item p {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form_consulta_item p label {
+  font-size: 22px;
+}
+
+.form_consulta_item p input {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form_consulta_item p select {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.form_consulta_item button {
+  width: 300px;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.botao_excluir {
+  background-color: red;
+  color: white;
+}
+
+.botao_excluir:hover {
+  background-color: rgb(131, 47, 47);
+}
+
+.botao_editar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.botao_salvar {
+  background-color: rgb(9, 238, 112);
+  color: white;
+}
+
+.botao_salvar:hover {
+  background-color: rgb(47, 131, 67);
+}
