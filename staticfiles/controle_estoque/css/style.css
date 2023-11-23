@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
 
 :root {
-  --bg: rgb(169, 92, 241);
-  --bg-bloco: rgb(189, 239, 186);
+  --bg: #e4c5c4; 
+  --bg-bloco: #c49582;
   --bg-bloco-hover: antiquewhite;
   --text: black;
   --font: "Roboto", sans-serif;
-  --bg-form-cadastro: white;
+  --bg-form-cadastro: #c49582;
+  --botao: rgb(88, 85, 85);
 }
 
 body {
@@ -59,6 +60,12 @@ body {
   flex-direction: column;
 }
 
+.back_home {
+  text-decoration: none;
+  color: var(--text);
+  font-size: large;
+}
+
 .titulo_cadastro {
 }
 .div_form {
@@ -71,7 +78,7 @@ body {
 .form_cadastro {
   width: 700px;
   height: auto;
-  background-color: var(--bg-form-cadastro);
+  background-color: var(--bg-bloco);
   padding: 30px;
   border-radius: 15px;
   margin-top: 15px;
@@ -109,6 +116,8 @@ body {
   margin-top: 10px;
   border-radius: 15px;
   cursor: pointer;
+  background-color: var(--botao);
+  color: white;
 }
 
 .alinhar_botao {
@@ -120,6 +129,7 @@ body {
 
 .form_cadastro button:hover {
   background-color: var(--bg-bloco-hover);
+  color: var(--text);
 }
 
 .header_consulta {
@@ -151,7 +161,7 @@ body {
 .card_produto_estoque {
   width: 35%;
   height: 135px;
-  background-color: aliceblue;
+  background-color: var(--bg-bloco);
   padding: 15px;
   border-radius: 15px;
   display: flex;
@@ -228,6 +238,8 @@ body {
   margin-bottom: 5px;
   border-radius: 10px;
   padding: 5px;
+  background-color: #e4c5c4;
+  color: var(--text);
 }
 
 .form_consulta_item button {
@@ -239,12 +251,13 @@ body {
 }
 
 .botao_excluir {
-  background-color: red;
+  background-color: var(--botao);
   color: white;
 }
 
 .botao_excluir:hover {
-  background-color: rgb(131, 47, 47);
+  background-color: rgb(206, 38, 38);
+  color: var(--text);
 }
 
 .botao_editar {
@@ -254,10 +267,11 @@ body {
 }
 
 .botao_salvar {
-  background-color: rgb(9, 238, 112);
+  background-color: var(--botao);
   color: white;
 }
 
 .botao_salvar:hover {
-  background-color: rgb(47, 131, 67);
+  background-color: rgb(62, 202, 95);
+  color: var(--text);
 }
