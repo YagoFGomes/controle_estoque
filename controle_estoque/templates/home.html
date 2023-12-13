@@ -1,29 +1,22 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controle de estoque</title>
-    <link
-      href="{% static 'global/css/global.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="{% static 'controle_estoque/css/style.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
-  <body>
-    <main class="main_home">
-      <a href="{% url 'consulta_page' %}" class="bloco_main">
-        <span class="text_bloco_main">Consultar item</span>
-      </a>
-      <a href="{% url 'cadastro_page' %}" class="bloco_main">
-        <span class="text_bloco_main">Cadastrar item</span>
-      </a>
-    </main>
-  </body>
-</html>
+{% block 'head' %}
+
+    <link href="{% static 'controle_estoque/css/global.css' %}" rel="stylesheet" />
+    <link href="{% static 'controle_estoque/css/style.css' %}" rel="stylesheet" />
+
+{% endblock%}
+
+{% block 'body' %}
+
+  <main class="main_home">
+    <a href="{% url 'consulta_page' %}" class="bloco_main">
+      <span class="text_bloco_main">Consultar item</span>
+    </a>
+    <a href="{% url 'cadastro_page' %}" class="bloco_main">
+      <span class="text_bloco_main">Cadastrar item</span>
+    </a>
+  </main>
+
+{% endblock%}
+
