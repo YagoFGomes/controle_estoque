@@ -1,57 +1,53 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultar Estoque</title>
-    <link
-      href="{% static 'global/css/global.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="{% static 'controle_estoque/css/style.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
-  <body>
-    <main class="main_consulta">
-      <div class="header_consulta">
-        <a href="{% url 'home_page' %}" class="back_home">
-          <span class="text_back_home">Voltar</span>
-        </a>
-        <h1 class="titulo_cadastro">Consultar Itens</h1>
-      </div>
+{% block 'head' %}
 
-      <div class="lista_produtos_estoque">
-        {% for produto in lista_de_produtos %}
-        <div class="card_produto_estoque">
-          <div class="header_card_produto">
-            <div class="nome_codigo_produto">
-              {{produto.nome_produto}} - Cód. {{produto.codigo_produto}}
-            </div>
-            <div class="acoes_card">
-              <a href="{% url 'consulta_item' produto.id %}">
-                <img
-                  src="{% static 'controle_estoque/imagens/visualizar.png' %}"
-                  width="25"
-                  class="botao_visualizar_card_produto"
-                  alt="visualizar"
-                />
-              </a>
-            </div>
+    <link href="{% static 'controle_estoque/css/global.css' %}" rel="stylesheet" />
+    <link href="{% static 'controle_estoque/css/style.css' %}" rel="stylesheet" />
+
+{% endblock%}
+
+{% block 'body' %}
+  <main class="main_consulta">
+    <div class="header_consulta">
+      <a href="{% url 'home_page' %}" class="back_home">
+        <span class="text_back_home">Voltar</span>
+      </a>
+      <h1 class="titulo_cadastro">Consultar Itens</h1>
+    </div>
+
+    <div class="lista_produtos_estoque">
+      {% for produto in lista_de_produtos %}
+      <div class="card_produto_estoque">
+        <div class="header_card_produto">
+          <div class="nome_codigo_produto">
+            {{produto.nome_produto}} - Cód. {{produto.codigo_produto}}
           </div>
-          <div class="footer_card_produto">
-            <div class="quantidade_produto">
-              {{produto.quantidade}} unidades
-            </div>
-            <div class="valor_produto">R${{produto.preco_venda}}</div>
+          <div class="acoes_card">
+            <a href="{% url 'consulta_item' produto.id %}">
+              <img
+                src="{% static 'controle_estoque/imagens/visualizar.png' %}"
+                width="25"
+                class="botao_visualizar_card_produto"
+                alt="visualizar"
+              />
+            </a>
           </div>
         </div>
-        {% endfor %}
+        <div class="footer_card_produto">
+          <div class="quantidade_produto">
+            {{produto.quantidade}} unidades
+          </div>
+          <div class="valor_produto">R${{produto.preco_venda}}</div>
+        </div>
       </div>
-    </main>
+      {% endfor %}
+    </div>
+  </main>
+
+{% endblock%}
+
+  <body>
+    
   </body>
 </html>
